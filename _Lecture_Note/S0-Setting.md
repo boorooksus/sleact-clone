@@ -57,3 +57,21 @@ npm i -D vite-tsconfig-paths
 
 npm i -D eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
 ```
+
+## 6강
+
+### 폴더 구조
+
+pages: 서비스 페이지
+components: 작은 컴포넌트
+layouts: 공통 레이아웃
+
+hooks:
+utils:
+typings:
+
+vite.config.ts에서 path, \_\_dirname 오류 해결
+
+```
+npm i --save-dev @types/node
+```
