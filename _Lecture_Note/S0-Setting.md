@@ -75,3 +75,14 @@ vite.config.ts에서 path, \_\_dirname 오류 해결
 ```
 npm i --save-dev @types/node
 ```
+
+## 7강
+
+### 코드 스플릿팅
+
+필요한 코드만 불러와서 빠르게 렌더링
+
+```
+npm i @loadable/component
+npm i --save-dev @types/loadable__component
+```
