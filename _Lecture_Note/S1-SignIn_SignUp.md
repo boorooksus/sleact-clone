@@ -65,3 +65,45 @@ a href태그 대신 Link to 사용하면 좋음.
 
 개발자도구 -> Application에서 session/cookie 정보 지우기
 express에서는 보통 'connect.sid'으로 되어있음
+
+## 5강
+
+### swr 사용
+
+강의에서 로그인 상태 저장하기 위해 사용.
+get/post 요청하는 방식으로 사용(보통은 get 사용)
+
+```
+npm i swr --save
+```
+
+```javascript
+const { data, error,revalidate } = useSWR('백엔드 주소', fetcher 함수);
+```
+
+`useSWR`에 주소와, 주소를 처리하는 fetcher함수 구현해서 인자로 전달
+`useSWR`은 첫 번째 인자를 두 번째 인자 함수의 인자로 전달
+revalidate: data나 error 값이 업데이트되면 리렌더링 시킴
+
+```javascript
+const fetcher = (url: string) => axios.get(url).then((response) => response.data);
+```
+
+fetcher함수는 위의 백엔드 주소를 인자로 전달 받음.
+주소 받아서 axios get 요청 처리
+
+swr 장점 - 로딩 상태인지 알 수 있음
+data가 존재하지 않으면 로딩 상태
+
+### swr 설정 추가
+
+백엔드, 프론트엔드 도메인 다르면 서로 쿠키 전달이 안됨
+-> fetcher 함수에 설정 추가해서 해결
+
+```javascript
+const fetcher = (url: string) => axios.get(url, { withCredentials: true }).then((response) => response.data);
+```
+
+withCredentials 옵션은 get 요청일땐 두 번째 인자로, post 요청일땐 세 번째 인자로 넣어줌
+
+위 설정 넣으면 쿠키 생성됨

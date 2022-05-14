@@ -86,3 +86,16 @@ npm i --save-dev @types/node
 npm i @loadable/component
 npm i --save-dev @types/loadable__component
 ```
+
+
+### 이모션
+js-in-css
+styled component와 사용법 유사
+```
+npm i @emotion/react @emotion/styled
+``` 
+
+이모션 + 바벨
+```
+npm i @emotion/babel-plugin --save
+```
