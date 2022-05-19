@@ -8,13 +8,13 @@ const Lab = loadable(() => import('./pages/Lab'));
 function App() {
   return (
     <div className="App">
-      <div className="App-header">
-        hello
+      <header className="App-header">
         <Routes>
-          <Route path="lab" element={<Lab />} />
+          <Route path="/" element={<div>hello</div>} />
+          <Route path="/lab" element={<Lab />} />
           <Route path="/signUp" element={<SignUp />} />
         </Routes>
-      </div>
+      </header>
     </div>
   );
 }
