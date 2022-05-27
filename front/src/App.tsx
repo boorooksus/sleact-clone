@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        hello
+        <div className="anaglyph">hello</div>
         <Routes>
           <Route path="lab" element={<Lab />} />
           <Route path="/signUp" element={<SignUp />} />

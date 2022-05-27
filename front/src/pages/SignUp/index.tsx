@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useCallback } from 'react';
-import { Button, Header, Form, Label, Input, LinkContainer, Error } from './styles';
+import { Button, Header, Form, Label, Input, LinkContainer, Error, Anaglyph } from './styles';
 
 const SignUp = () => {
   //   //   const { data: userData } = useSWR('/api/users', fetcher);
@@ -93,6 +93,10 @@ const SignUp = () => {
         이미 회원이신가요?&nbsp;
         <a href="/login">로그인 하러가기</a>
       </LinkContainer>
+
+      <Anaglyph>
+        <h2>Test</h2>
+      </Anaglyph>
     </div>
   );
 };

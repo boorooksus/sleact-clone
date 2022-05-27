@@ -3,6 +3,7 @@ import logo from '../../logo.svg';
 import '../../App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Anaglyph } from './style';
 
 const Lab = () => {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ const Lab = () => {
 
   return (
     <div>
+      <Anaglyph>Test</Anaglyph>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
