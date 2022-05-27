@@ -1,19 +1,21 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import '../../App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+<<<<<<< HEAD
 import { Anaglyph } from './style';
+=======
+import Logo from './sections/Logo';
+>>>>>>> 2ee06cbdd219a7a6c66879ca4fed0a8d04eba8db
 
 const Lab = () => {
-  const [count, setCount] = useState(0);
-
   useEffect(() => {
     axios.get('/api/hello').then((response) => console.log('hello res: ', response.data));
   }, []);
 
   return (
     <div>
+<<<<<<< HEAD
       <Anaglyph>Test</Anaglyph>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -41,6 +43,9 @@ const Lab = () => {
           </a>
         </p>
       </header>
+=======
+      <Logo />
+>>>>>>> 2ee06cbdd219a7a6c66879ca4fed0a8d04eba8db
     </div>
   );
 };
